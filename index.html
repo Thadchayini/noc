@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<!-- clock 1 -->
+<script>
+    function startTime() {
+      var today = new Date();
+      var h = today.getHours();
+      var m = today.getMinutes();
+      var s = today.getSeconds();
+      m = checkTime(m);
+      s = checkTime(s);
+      document.getElementById('txt').innerHTML =
+      h + ":" + m + ":" + s;
+      var t = setTimeout(startTime, 500);
+    }
+    function checkTime(i) {
+      if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+      return i;
+    }
+    </script>
+    <!-- clock 1 -->
+<body onload="startTime()">
+
+<div class="jumbotron text-center" style="height:150px">
+    <div class="row">
+        <div class="col-sm-4">
+            <button type="button" class="btn btn-danger" style="height:76px; width:200px;">Wifi Status</button>
+        </div>
+        <div class="col-sm-4"><h2>CGI Front Office</h2></div>
+        <div class="col-sm-4"> 
+            <!-- clock1 -->
+            <button type="button" class="btn btn-primary" style="height:76px; width:200px;"><div id="txt"></div></button>
+        </div>
+    </div>
+  
+
+</div>
+  
+<div class="container">
+
+  <div class="row" >
+    <div class="col-sm-4" style="border:solid">
+        <div class="row">
+            <div class=col-sm-6   style="border:solid; height:76px; background-color:red;">1</div>
+            <div class=col-sm-6   style="border:solid; height:76px; background-color:blue;">2</div>
+            </div>
+            <div class="row" style="border:solid; height:80px;">
+            <div class=col-sm-6   style="border:solid; height:77px; background-color:green;">3</div>
+            <div class=col-sm-6   style="border:solid; height:77px; background-color:pink;">4</div>
+            </div>
+    </div>
+    <div class="col-sm-4" style="border:solid; background-color:lightslategray;">
+      <h3>Monitor 5</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    </div>
+    <div class="col-sm-4"  style="border:solid; background-color:lime;">
+      <h3>Monitor 7</h3>        
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-4" style="border:solid">
+      <div class="row" style="border:solid; height:78px; background-color:orange;">1</div>
+      <div class="row" style="border:solid; height:79px; background-color:purple;">2</div>
+    </div>
+    <div class="col-sm-4"  style="border:solid; background-color:lightyellow;">
+      <h3>Monitor 6</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    </div>
+    <div class="col-sm-4"  style="border:solid; background-color:lightsteelblue;">
+      <h3>TV 1</h3>        
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-4" style="border:solid">
+    <div class="row">
+        <div class=col-sm-4  style="border:solid; height:157px; background-color:lightcoral;">1</div>
+        <div class=col-sm-4  style="border:solid; height:157px; background-color:lightgreen;">2</div>
+        <div class=col-sm-4  style="border:solid; height:157px; background-color:lightsalmon;">3</div>
+    </div>
+    </div>
+    <div class="col-sm-4"  style="border:solid; background-color:linen;">
+      <h3>Image</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    </div>
+    <div class="col-sm-4"  style="border:solid; background-color:blueviolet;">
+      <h3>Tv 2</h3>        
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    </div>
+  </div>
+  
+
+</div>
+
+</body>
+</html>
